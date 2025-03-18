@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerology Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Numerology Calculator</h1>
+
+        <div class="input-section">
+            <label for="birthdate">Birthdate (MM/DD/YYYY):</label>
+            <input type="text" id="birthdate" placeholder="MM/DD/YYYY" aria-describedby="birthdateHelp">
+            <div id="birthdateHelp" class="help-text">Enter your birthdate in MM/DD/YYYY format.</div>
+            <div id="birthdateError" class="error-message" role="alert"></div>
+        </div>
+
+        <div class="input-section">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" placeholder="Enter your full name" aria-describedby="nameHelp">
+            <div id="nameHelp" class="help-text">Enter your full name.</div>
+            <div id="nameError" class="error-message" role="alert"></div>
+        </div>
+
+        <div class="input-section">
+            <label>Calculation Type:</label>
+            <input type="radio" id="lifePathRadio" name="calculationType" value="lifePath" checked>
+            <label for="lifePathRadio">Life Path Number</label>
+            <input type="radio" id="destinyRadio" name="calculationType" value="destiny">
+            <label for="destinyRadio">Destiny Number</label>
+        </div>
+
+        <div class="button-section">
+            <button id="calculateBtn">Calculate</button>
+        </div>
+
+        <div class="results-section">
+            <h2>Results</h2>
+            <div id="lifePathNumber" style="display: none;" aria-live="polite">
+                <strong>Life Path Number:</strong> <span id="lifePathValue"></span>
+                <p id="lifePathInterpretation"></p>
+            </div>
+
+            <div id="destinyNumber" style="display: none;" aria-live="polite">
+                <strong>Destiny Number:</strong> <span id="destinyValue"></span>
+                <p id="destinyInterpretation"></p>
+            </div>
+            <div id="generalError" class="error-message" role="alert"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
